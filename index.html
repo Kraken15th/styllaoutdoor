@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stylla Outdoor</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -116,6 +117,42 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
+
+        .discount-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Vertical scroll for mobile */
+        @media (max-width: 768px) {
+            .vertical-scroll {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .scroll-item {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .vertical-scroll {
+                display: grid;
+            }
+        }
     </style>
 </head>
 
@@ -123,8 +160,11 @@
     <!-- Hero Section -->
     <div class="hero-gradient text-white py-8 shadow-2xl">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-5xl md:text-6xl font-black mb-3 tracking-tight">Stylla Outdoor</h1>
-            <p class="text-xl md:text-2xl font-light mb-6">احصل على عرض طقم ال 4 أفراد</p>
+            <h1 class="text-5xl md:text-6xl tracking-tight mb-3 font-[Galada]">
+                Stylla Outdoor
+            </h1>
+
+            <p class="text-xl md:text-2xl font-light mb-6">عروض الوايت فرايداي على طقم ال 4 افراد 🎉</p>
 
             <!-- Countdown Timer -->
             <div class="timer-box inline-block rounded-2xl px-8 py-4 shadow-2xl">
@@ -150,61 +190,44 @@
     </div>
 
     <div class="container mx-auto px-4 py-12 max-w-7xl">
+        <!-- Discount Offer Banner -->
+        <div class="discount-badge text-white text-center py-6 px-4 rounded-2xl shadow-2xl mb-12">
+            <h3 class="text-3xl font-black mb-2">🎉 عرض خاص 🎉</h3>
+            <p class="text-xl font-bold">عدد 1 طقم بسعر 10,999 بدل 14,000!</p>
+        </div>
+
+        <div class="discount-badge text-white text-center py-6 px-4 rounded-2xl shadow-2xl mb-12">
+            <h3 class="text-3xl font-black mb-2">🎉 عرض خاص 🎉</h3>
+            <p class="text-xl font-bold">عدد 2 طقم بسعر 19,999!بدل 28,000</p>
+        </div>
+
         <!-- Product Categories -->
         <section class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold text-gray-800 mb-3">اختر الموديل المناسب</h2>
-                <p class="text-gray-600 text-lg">تصفح مجموعتنا المميزة من الأثاث العصري</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-3">اختار الطقم المناسب لذوقك </h2>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
+            <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
+
+                <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
                     onclick="selectCategory('model1', this)">
-                    <div class="bg-gradient-to-br from-purple-100 to-purple-200 h-48 flex items-center justify-center">
-                        <div class="text-center">
-
-                            <img src="assets/model1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center">model1</h3>
-                    </div>
-                </div>
-
-                <div class="category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
-                    onclick="selectCategory('model2', this)">
-                    <div class="bg-gradient-to-br from-blue-100 to-blue-200 h-48 flex items-center justify-center">
-                        <div class="text-center">
-
-                            <img src="assets/model2.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center"> model2 </h3>
-                    </div>
-                </div>
-
-                <div class="category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
-                    onclick="selectCategory('model3', this)">
                     <div class="bg-gradient-to-br from-pink-100 to-pink-200 h-48 flex items-center justify-center">
-                        <div class="text-center">
-                            <img src="assets/model3.jpg" alt="">
-                        </div>
+                        <img src="assets/model3.jpg" alt="Model 3" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center">model3</h3>
+                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">model1</h3>
+                        <p class="text-sm text-gray-600 text-center">أناقة لا مثيل لها</p>
                     </div>
                 </div>
 
-                <div class="category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
-                    onclick="selectCategory('model4', this)">
+                <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
+                    onclick="selectCategory('model2', this)">
                     <div class="bg-gradient-to-br from-green-100 to-green-200 h-48 flex items-center justify-center">
-                        <div class="text-center">
-                            <img src="assets/model4.jpg" alt="">
-                        </div>
+                        <img src="assets/model4.jpg" alt="Model 4" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center">model4</h3>
+                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">model2</h3>
+                        <p class="text-sm text-gray-600 text-center">تصميم فاخر ومميز</p>
                     </div>
                 </div>
             </div>
@@ -217,38 +240,42 @@
                 <p class="text-gray-600 text-lg">اناقة وراحة تناسب احتياجك</p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery5.jpg" alt="">
+            <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="scroll-item">
+                    <div
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/family1.jpg" alt="Gallery 5" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">استمتع معنا بعروض الوايت فرايداي</p>
                 </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery6.jpg" alt="">
+                <div class="scroll-item">
+                    <div
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/area.jpeg" alt="Gallery 6" class="w-full h-full **object-contain**">
+                    </div>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">مقاسات مريحة ومناسبة للغاية</p>
                 </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery3.jpg" alt="">
+                <div class="scroll-item">
+                    <div
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/water.jpg" alt="Gallery 3" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">قماش ووتربروف مضاد للماء</p>
                 </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery4.jpg" alt="">
+                <div class="scroll-item">
+                    <div
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/handle.jpg" alt="Gallery 4" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">يد انسيابية من الخشب الطبيعي</p>
                 </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery1.jpg" alt="">
-                </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery2.jpg" alt="">
-                </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery7.jpg" alt="">
-                </div>
-                <div
-                    class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg flex items-center justify-center overflow-hidden">
-                    <img src="assets/gallery8.jpg" alt="">
+                <div class="scroll-item">
+                    <div
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/family2.jpg" alt="Gallery 1" class="w-full h-full object-cover">
+                    </div>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">استرخاء بلا حدود، ولحظات عائلية لا تُنسى.
+                    </p>
                 </div>
             </div>
         </section>
@@ -257,76 +284,165 @@
         <section class="mb-16">
             <div class="glass-effect rounded-3xl shadow-2xl p-8 md:p-12">
                 <div class="text-center mb-10">
-                    <h2 class="text-4xl font-bold text-gray-800 mb-3">خصص ألوانك</h2>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-3">ألوان مخصصة</h2>
                     <p class="text-gray-600 text-lg">اختر الألوان التي تناسب ذوقك</p>
                 </div>
 
-                <!-- Metal Color Selection -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-gray-700 mb-6 flex items-center gap-3">
-                        <span class="text-3xl">🔩</span>
-                        لون الإطار المعدني
-                    </h3>
-                    <div class="flex gap-6 flex-wrap justify-center">
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #000000;"
-                                onclick="selectColor('metal', '#000000', 'أسود', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">أسود</p>
+                <!-- Product 1 Colors -->
+                <div id="product1Colors">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-6">المنتج الأول</h3>
+
+                    <!-- Metal Color Selection -->
+                    <div class="mb-12">
+                        <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
+                            <span class="text-3xl">🔩</span>
+                            لون الإطار المعدني
+                        </h4>
+                        <div class="flex gap-6 flex-wrap justify-center">
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #000000;"
+                                    onclick="selectColor('metal', '#000000', 'أسود', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">أسود</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #36454F;"
+                                    onclick="selectColor('metal', '#36454F', 'رمادي داكن', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">رمادي داكن</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto"
+                                    style="background-color: #FFFFFF; border: 2px solid #e0e0e0;"
+                                    onclick="selectColor('metal', '#FFFFFF', 'أبيض', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">أبيض</p>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #36454F;"
-                                onclick="selectColor('metal', '#36454F', 'رمادي داكن', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">رمادي داكن</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #FFFFFF; border: 2px solid #e0e0e0;"
-                                onclick="selectColor('metal', '#FFFFFF', 'أبيض', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">أبيض</p>
+                    </div>
+
+                    <!-- Pillow Color Selection -->
+                    <div class="mb-8">
+                        <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
+                            <span class="text-3xl">🛋️</span>
+                            لون القماش والوسائد
+                        </h4>
+                        <div class="flex gap-6 flex-wrap justify-center">
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #808080;"
+                                    onclick="selectColor('pillow', '#808080', 'رمادي', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">رمادي</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #F5F5DC;"
+                                    onclick="selectColor('pillow', '#F5F5DC', 'بيج', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">بيج</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #F0F8FF;"
+                                    onclick="selectColor('pillow', '#F0F8FF', 'سماوي فاتح', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">سماوي فاتح</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #4F433C;"
+                                    onclick="selectColor('pillow', '#4F433C', 'بني', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">بني</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #0000FF;"
+                                    onclick="selectColor('pillow', '#0000FF', 'أزرق', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">أزرق</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="color-box mx-auto" style="background-color: #40E0D0;"
+                                    onclick="selectColor('pillow', '#40E0D0', 'فيروزي', this, 1)"></div>
+                                <p class="text-sm mt-3 font-semibold text-gray-700">فيروزي</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pillow Color Selection -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-700 mb-6 flex items-center gap-3">
-                        <span class="text-3xl">🛋️</span>
-                        لون القماش والوسائد
-                    </h3>
-                    <div class="flex gap-6 flex-wrap justify-center">
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #808080;"
-                                onclick="selectColor('pillow', '#808080', 'رمادي', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">رمادي</p>
+                <!-- Add Second Product Button -->
+                <div class="text-center mt-8">
+                    <button id="addSecondProduct" onclick="toggleSecondProduct()"
+                        class="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
+                        ➕ أضف منتج ثاني واحصل على عرض ال 2 طقم
+                    </button>
+                </div>
+
+                <!-- Product 2 Colors (Hidden by default) -->
+                <div id="product2Colors" class="mt-12 hidden">
+                    <div class="border-t-4 border-purple-300 pt-8">
+                        <h3 class="text-2xl font-bold text-purple-600 mb-6">المنتج الثاني 🎉</h3>
+
+                        <!-- Metal Color Selection -->
+                        <div class="mb-12">
+                            <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
+                                <span class="text-3xl">🔩</span>
+                                لون الإطار المعدني
+                            </h4>
+                            <div class="flex gap-6 flex-wrap justify-center">
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #000000;"
+                                        onclick="selectColor('metal', '#000000', 'أسود', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">أسود</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #36454F;"
+                                        onclick="selectColor('metal', '#36454F', 'رمادي داكن', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">رمادي داكن</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto"
+                                        style="background-color: #FFFFFF; border: 2px solid #e0e0e0;"
+                                        onclick="selectColor('metal', '#FFFFFF', 'أبيض', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">أبيض</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #F5F5DC;"
-                                onclick="selectColor('pillow', '#F5F5DC', 'بيج', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">بيج</p>
+
+                        <!-- Pillow Color Selection -->
+                        <div class="mb-8">
+                            <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
+                                <span class="text-3xl">🛋️</span>
+                                لون القماش والوسائد
+                            </h4>
+                            <div class="flex gap-6 flex-wrap justify-center">
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #808080;"
+                                        onclick="selectColor('pillow', '#808080', 'رمادي', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">رمادي</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #F5F5DC;"
+                                        onclick="selectColor('pillow', '#F5F5DC', 'بيج', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">بيج</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #F0F8FF;"
+                                        onclick="selectColor('pillow', '#F0F8FF', 'سماوي فاتح', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">سماوي فاتح</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #4F433C;"
+                                        onclick="selectColor('pillow', '#4F433C', 'بني', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">بني</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #0000FF;"
+                                        onclick="selectColor('pillow', '#0000FF', 'أزرق', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">أزرق</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="color-box mx-auto" style="background-color: #40E0D0;"
+                                        onclick="selectColor('pillow', '#40E0D0', 'فيروزي', this, 2)"></div>
+                                    <p class="text-sm mt-3 font-semibold text-gray-700">فيروزي</p>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #F0F8FF;"
-                                onclick="selectColor('pillow', '#F0F8FF', 'سماوي فاتح', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">سماوي فاتح</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #4F433C;"
-                                onclick="selectColor('pillow', '#4F433C', 'بني', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">بني</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #0000FF;"
-                                onclick="selectColor('pillow', '#0000FF', 'أزرق', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">أزرق</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #40E0D0;"
-                                onclick="selectColor('pillow', '#40E0D0', 'فيروزي', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">فيروزي</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="color-box mx-auto" style="background-color: #30D5C8;"
-                                onclick="selectColor('pillow', '#30D5C8', 'تركواز', this)"></div>
-                            <p class="text-sm mt-3 font-semibold text-gray-700">تركواز</p>
+                            <button onclick="toggleSecondProduct()"
+                                class="bg-red-500 text-white font-bold py-3 px-6 rounded-xl hover:bg-red-600 transition">
+                                ❌ إلغاء المنتج الثاني
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -339,6 +455,9 @@
                 <div class="text-center mb-10">
                     <h2 class="text-4xl font-bold text-gray-800 mb-3">أكمل بياناتك</h2>
                     <p class="text-gray-600 text-lg">معك على مدار الساعة</p>
+                    <div id="discountNotice" class="hidden mt-4 bg-green-100 border-2 border-green-500 rounded-xl p-4">
+                        <p class="text-green-700 font-bold text-xl">🎉 تهانينا! سيتم تطبيق خصم 30% على طلبك</p>
+                    </div>
                 </div>
 
                 <form id="orderForm" class="space-y-6 max-w-2xl mx-auto">
@@ -391,21 +510,30 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-16">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-lg">© 2024 أثاث عصري مخصص - جميع الحقوق محفوظة</p>
+            <p class="text-lg">© 2024 ستايلا اوت دور - جميع الحقوق محفوظة</p>
             <p class="mt-2 text-gray-400">صنع بحب لعشاق التصميم الداخلي الفاخر</p>
         </div>
     </footer>
 
     <script>
         let selectedCategory = '';
-        let selectedMetalColor = '';
-        let selectedMetalColorName = '';
-        let selectedPillowColor = '';
-        let selectedPillowColorName = '';
+        let secondProductEnabled = false;
+
+        // Product 1 selections
+        let product1MetalColor = '';
+        let product1MetalColorName = '';
+        let product1PillowColor = '';
+        let product1PillowColorName = '';
+
+        // Product 2 selections
+        let product2MetalColor = '';
+        let product2MetalColorName = '';
+        let product2PillowColor = '';
+        let product2PillowColorName = '';
 
         // Countdown Timer (1 hour)
         function startCountdown() {
-            const endTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour from now
+            const endTime = new Date().getTime() + (60 * 60 * 1000);
 
             const timer = setInterval(function () {
                 const now = new Date().getTime();
@@ -438,29 +566,69 @@
             element.classList.add('selected');
         }
 
-        function selectColor(type, color, colorName, element) {
+        function toggleSecondProduct() {
+            secondProductEnabled = !secondProductEnabled;
+            const product2Section = document.getElementById('product2Colors');
+            const discountNotice = document.getElementById('discountNotice');
+            const addButton = document.getElementById('addSecondProduct');
+
+            if (secondProductEnabled) {
+                product2Section.classList.remove('hidden');
+                discountNotice.classList.remove('hidden');
+                addButton.classList.add('hidden');
+                fbq('track', 'AddToCart', { content_type: 'second_product', value: 0, currency: 'EGP' });
+            } else {
+                product2Section.classList.add('hidden');
+                discountNotice.classList.add('hidden');
+                addButton.classList.remove('hidden');
+                // Reset product 2 selections
+                product2MetalColor = '';
+                product2MetalColorName = '';
+                product2PillowColor = '';
+                product2PillowColorName = '';
+            }
+        }
+
+        function selectColor(type, color, colorName, element, productNum) {
+            const parentSection = element.closest('#product1Colors, #product2Colors');
+
             if (type === 'metal') {
-                document.querySelectorAll('.color-box').forEach(box => {
+                parentSection.querySelectorAll('.color-box').forEach(box => {
                     const parent = box.closest('div').parentElement.parentElement.parentElement;
-                    if (parent && parent.querySelector('h3') && parent.querySelector('h3').textContent.includes('المعدني')) {
+                    if (parent && parent.querySelector('h4') && parent.querySelector('h4').textContent.includes('المعدني')) {
                         box.classList.remove('selected');
                     }
                 });
-                selectedMetalColor = color;
-                selectedMetalColorName = colorName;
+
+                if (productNum === 1) {
+                    product1MetalColor = color;
+                    product1MetalColorName = colorName;
+                } else {
+                    product2MetalColor = color;
+                    product2MetalColorName = colorName;
+                }
+
                 element.classList.add('selected');
-                fbq('track', 'CustomizeProduct', { content_type: 'metal_color', value: colorName });
+                fbq('track', 'CustomizeProduct', { content_type: `metal_color_product${productNum}`, value: colorName });
+
             } else if (type === 'pillow') {
-                document.querySelectorAll('.color-box').forEach(box => {
+                parentSection.querySelectorAll('.color-box').forEach(box => {
                     const parent = box.closest('div').parentElement.parentElement.parentElement;
-                    if (parent && parent.querySelector('h3') && parent.querySelector('h3').textContent.includes('القماش')) {
+                    if (parent && parent.querySelector('h4') && parent.querySelector('h4').textContent.includes('القماش')) {
                         box.classList.remove('selected');
                     }
                 });
-                selectedPillowColor = color;
-                selectedPillowColorName = colorName;
+
+                if (productNum === 1) {
+                    product1PillowColor = color;
+                    product1PillowColorName = colorName;
+                } else {
+                    product2PillowColor = color;
+                    product2PillowColorName = colorName;
+                }
+
                 element.classList.add('selected');
-                fbq('track', 'CustomizeProduct', { content_type: 'pillow_color', value: colorName });
+                fbq('track', 'CustomizeProduct', { content_type: `pillow_color_product${productNum}`, value: colorName });
             }
         }
 
@@ -473,24 +641,38 @@
             const city = document.getElementById('city').value;
             const fullAddress = document.getElementById('fullAddress').value;
 
+            // Validation for Product 1
             if (!selectedCategory) {
                 alert('⚠️ الرجاء اختيار فئة المنتج أولاً');
                 return;
             }
-            if (!selectedMetalColor) {
-                alert('⚠️ الرجاء اختيار لون الهيكل المعدني');
+            if (!product1MetalColor) {
+                alert('⚠️ الرجاء اختيار لون الإطار المعدني للمنتج الأول');
                 return;
             }
-            if (!selectedPillowColor) {
-                alert('⚠️ الرجاء اختيار لون القماش والوسائد');
+            if (!product1PillowColor) {
+                alert('⚠️ الرجاء اختيار لون القماش والوسائد للمنتج الأول');
                 return;
+            }
+
+            // Validation for Product 2 if enabled
+            if (secondProductEnabled) {
+                if (!product2MetalColor) {
+                    alert('⚠️ الرجاء اختيار لون الإطار المعدني للمنتج الثاني');
+                    return;
+                }
+                if (!product2PillowColor) {
+                    alert('⚠️ الرجاء اختيار لون القماش والوسائد للمنتج الثاني');
+                    return;
+                }
             }
 
             fbq('track', 'InitiateCheckout', {
                 content_name: selectedCategory,
                 content_category: 'furniture',
                 value: 0,
-                currency: 'EGP'
+                currency: 'EGP',
+                num_items: secondProductEnabled ? 2 : 1
             });
 
             // Prepare readable WhatsApp message
@@ -498,12 +680,20 @@
             message += ` *طلب جديد*\n`;
             message += `━━━━━━━━━━━━━━━━━\n\n`;
 
-            message += ` *تفاصيل المنتج:*\n`;
-            message += `• الفئة: ${selectedCategory}\n\n`;
+            // Product 1 Details
+            message += ` *المنتج الأول:*\n`;
+            message += `• الفئة: ${selectedCategory}\n`;
+            message += `• لون الإطار المعدني: ${product1MetalColorName}\n`;
+            message += `• لون القماش والوسائد: ${product1PillowColorName}\n\n`;
 
-            message += ` *الألوان المختارة:*\n`;
-            message += `• لون الهيكل المعدني: ${selectedMetalColorName}\n`;
-            message += `• لون القماش والوسائد: ${selectedPillowColorName}\n\n`;
+            // Product 2 Details (if enabled)
+            if (secondProductEnabled) {
+                message += ` *المنتج الثاني:*\n`;
+                message += `• الفئة: ${selectedCategory}\n`;
+                message += `• لون الإطار المعدني: ${product2MetalColorName}\n`;
+                message += `• لون القماش والوسائد: ${product2PillowColorName}\n\n`;
+                message += `🎉 *خصم خاص: 30% على الإجمالي*\n\n`;
+            }
 
             message += ` *بيانات العميل:*\n`;
             message += `• الاسم الكامل: ${fullName}\n`;
@@ -518,15 +708,17 @@
 
             message += `━━━━━━━━━━━━━━━━━\n`;
             message += ` تم إرسال الطلب: ${new Date().toLocaleString('ar-EG')}\n`;
+            message += ` عدد القطع: ${secondProductEnabled ? '2' : '1'}\n`;
             message += ` شكراً لاختياركم أثاثنا العصري`;
 
-            const whatsappUrl = `https://wa.me/201019550337?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/201558782200?text=${encodeURIComponent(message)}`;
 
             fbq('track', 'Purchase', {
                 content_name: selectedCategory,
                 content_category: 'furniture',
                 value: 0,
-                currency: 'EGP'
+                currency: 'EGP',
+                num_items: secondProductEnabled ? 2 : 1
             });
 
             window.open(whatsappUrl, '_blank');
