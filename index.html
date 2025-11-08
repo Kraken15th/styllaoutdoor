@@ -208,7 +208,8 @@
             <p class="text-xl font-bold">عدد 2 طقم بسعر 19,999! بدل 28,000</p>
         </div>
 
-        <!-- Product Categories -->
+
+        <!-- Choose Your Model Section -->
         <section class="mb-16">
             <div class="text-center mb-10">
                 <h2 class="text-4xl font-bold text-gray-800 mb-3">اختار الطقم المناسب لذوقك</h2>
@@ -218,8 +219,8 @@
             <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
                     onclick="selectCategory('model1', this)">
-                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 h-48 flex items-center justify-center p-2">
-                        <img src="assets/model3.jpg" alt="Model 1" class="max-w-full max-h-full object-contain">
+                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 h-48 overflow-hidden">
+                        <img src="assets/model3.jpg" alt="Model 1" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 bg-white">
                         <h3 class="text-xl font-bold text-gray-800 text-center mb-2">Model1</h3>
@@ -230,9 +231,8 @@
 
                 <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
                     onclick="selectCategory('model2', this)">
-                    <div
-                        class="bg-gradient-to-br from-green-100 to-green-200 h-48 flex items-center justify-center p-2">
-                        <img src="assets/model4.jpg" alt="Model 2" class="max-w-full max-h-full object-contain">
+                    <div class="bg-gradient-to-br from-green-100 to-green-200 h-48 overflow-hidden">
+                        <img src="assets/model4.jpg" alt="Model 2" class="w-full h-full object-cover">
                     </div>
                     <div class="p-4 bg-white">
                         <h3 class="text-xl font-bold text-gray-800 text-center mb-2">Model2</h3>
@@ -243,6 +243,7 @@
             </div>
         </section>
 
+
         <!-- Product Gallery -->
         <section class="mb-16">
             <div class="text-center mb-10">
@@ -251,43 +252,50 @@
             </div>
 
             <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
+
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
-                        <img src="assets/family1.jpg" alt="Gallery 1" class="max-w-full max-h-full object-contain">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/family1.jpg" alt="Gallery 1" class="w-full h-full object-cover">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">استمتع معنا بعروض الوايت فرايداي</p>
                 </div>
+
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
-                        <img src="assets/area.jpeg" alt="Gallery 2" class="max-w-full max-h-full object-contain">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/area.jpeg" alt="Gallery 2" class="w-full h-full object-cover">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">مقاسات مريحة ومناسبة للغاية</p>
                 </div>
+
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
-                        <img src="assets/water.jpg" alt="Gallery 3" class="max-w-full max-h-full object-contain">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/water.jpg" alt="Gallery 3" class="w-full h-full object-cover">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">قماش ووتربروف مضاد للماء</p>
                 </div>
+
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
-                        <img src="assets/handle.jpg" alt="Gallery 4" class="max-w-full max-h-full object-contain">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/handle.jpg" alt="Gallery 4" class="w-full h-full object-cover">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">يد انسيابية من الخشب الطبيعي</p>
                 </div>
+
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
-                        <img src="assets/family2.jpg" alt="Gallery 5" class="max-w-full max-h-full object-contain">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
+                        <img src="assets/family2.jpg" alt="Gallery 5" class="w-full h-full object-cover">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">استرخاء بلا حدود، ولحظات عائلية لا تُنسى</p>
                 </div>
+
             </div>
         </section>
+
 
         <!-- Color Selection -->
         <section class="mb-16">
@@ -383,7 +391,7 @@
                                     <p class="text-sm mt-3 font-semibold text-gray-700">أسود</p>
                                 </div>
                                 <div class="text-center">
-                                    <div class="color-box mx-auto" style="background-color: #36454F;"
+                                    <div class="color-box mx-auto" style="background-color: #6a6b6b;"
                                         onclick="selectColor('metal', '#36454F', 'رمادي داكن', this, 2)"></div>
                                     <p class="text-sm mt-3 font-semibold text-gray-700">رمادي داكن</p>
                                 </div>
@@ -403,7 +411,7 @@
                             </h4>
                             <div class="flex gap-6 flex-wrap justify-center">
                                 <div class="text-center">
-                                    <div class="color-box mx-auto" style="background-color: #808080;"
+                                    <div class="color-box mx-auto" style="background-color: #909090;"
                                         onclick="selectColor('pillow', '#808080', 'رمادي', this, 2)"></div>
                                     <p class="text-sm mt-3 font-semibold text-gray-700">رمادي</p>
                                 </div>
@@ -802,7 +810,7 @@
             message += `• الإجمالي: ${totalPrice.toLocaleString()} جنيه\n\n`;
 
             message += `━━━━━━━━━━━━━━━━━\n`;
-            message += ` تم إرسال الطلب: ${new Date().toLocaleString('ar-EG')}\n`;
+            message += ` تأكيد الطلب: ${new Date().toLocaleString('ar-EG')}\n`;
             message += ` شكراً لاختياركم أثاثنا العصري`;
 
             const whatsappUrl = `https://wa.me/201558782200?text=${encodeURIComponent(message)}`;
