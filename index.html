@@ -161,10 +161,55 @@
             border-radius: 8px;
             font-size: 1.1rem;
         }
+
+        .sticky-btn {
+            position: fixed;
+            left: 20px;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        /* موبايل */
+        @media (max-width: 768px) {
+            .sticky-btn {
+                left: 10px;
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .sticky-btn i {
+                font-size: 1.5rem;
+            }
+
+            .sticky-btn span {
+                font-size: 0.875rem;
+                /* قللنا الحجم بدل ما نلغيه */
+                display: inline;
+                /* مهم جدًا */
+            }
+        }
+
+        /* شاشات أصغر جدًا */
+        @media (max-width: 480px) {
+            .sticky-btn {
+                left: 10px;
+                padding: 0.45rem 0.7rem;
+                border-radius: 30px;
+            }
+        }
     </style>
 </head>
 
 <body class="min-h-screen">
+
+    <a href="https://wa.me/201558782200" target="_blank"
+        class="sticky-btn bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2"
+        style="bottom: 100px;">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="font-semibold">تواصل معنا واتساب</span>
+    </a>
+
+
     <!-- Hero Section -->
     <div class="hero-gradient text-white py-8 shadow-2xl">
         <div class="container mx-auto px-4 text-center">
