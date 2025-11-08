@@ -37,7 +37,7 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #130909 0%, #740404 100%);
         }
 
         .color-box {
@@ -87,7 +87,7 @@
         }
 
         .timer-box {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #f3b5b5 0%, #aa0215 100%);
             animation: pulse 2s infinite;
         }
 
@@ -109,7 +109,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #535d85 0%, #0f041a 100%);
             transition: all 0.3s ease;
         }
 
@@ -119,7 +119,7 @@
         }
 
         .discount-badge {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #000000 0%, #4a3638 100%);
             animation: bounce 2s infinite;
         }
 
@@ -135,7 +135,6 @@
             }
         }
 
-        /* Vertical scroll for mobile */
         @media (max-width: 768px) {
             .vertical-scroll {
                 display: flex;
@@ -153,6 +152,15 @@
                 display: grid;
             }
         }
+
+        .price-tag {
+            background: linear-gradient(135deg, #620202 0%, #000000 100%);
+            color: white;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 
@@ -163,7 +171,6 @@
             <h1 class="text-5xl md:text-6xl tracking-tight mb-3 font-[Galada]">
                 Stylla Outdoor
             </h1>
-
             <p class="text-xl md:text-2xl font-light mb-6">عروض الوايت فرايداي على طقم ال 4 افراد 🎉</p>
 
             <!-- Countdown Timer -->
@@ -192,42 +199,45 @@
     <div class="container mx-auto px-4 py-12 max-w-7xl">
         <!-- Discount Offer Banner -->
         <div class="discount-badge text-white text-center py-6 px-4 rounded-2xl shadow-2xl mb-12">
-            <h3 class="text-3xl font-black mb-2">🎉 عرض خاص 🎉</h3>
+            <h3 class="text-3xl font-black mb-2">🎉 عرض القطعة 🎉</h3>
             <p class="text-xl font-bold">عدد 1 طقم بسعر 10,999 بدل 14,000!</p>
         </div>
 
         <div class="discount-badge text-white text-center py-6 px-4 rounded-2xl shadow-2xl mb-12">
-            <h3 class="text-3xl font-black mb-2">🎉 عرض خاص 🎉</h3>
-            <p class="text-xl font-bold">عدد 2 طقم بسعر 19,999!بدل 28,000</p>
+            <h3 class="text-3xl font-black mb-2">🎉 عرض القطعتين 🎉</h3>
+            <p class="text-xl font-bold">عدد 2 طقم بسعر 19,999! بدل 28,000</p>
         </div>
 
         <!-- Product Categories -->
         <section class="mb-16">
             <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold text-gray-800 mb-3">اختار الطقم المناسب لذوقك </h2>
+                <h2 class="text-4xl font-bold text-gray-800 mb-3">اختار الطقم المناسب لذوقك</h2>
+                <p class="text-gray-600 text-lg">يمكنك اختيار موديل واحد أو موديلين مختلفين</p>
             </div>
 
             <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
-
                 <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
                     onclick="selectCategory('model1', this)">
-                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 h-48 flex items-center justify-center">
-                        <img src="assets/model3.jpg" alt="Model 3" class="w-full h-full object-cover">
+                    <div class="bg-gradient-to-br from-pink-100 to-pink-200 h-48 flex items-center justify-center p-2">
+                        <img src="assets/model3.jpg" alt="Model 1" class="max-w-full max-h-full object-contain">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">model1</h3>
-                        <p class="text-sm text-gray-600 text-center">أناقة لا مثيل لها</p>
+                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">Model1</h3>
+                        <p class="text-sm text-gray-600 text-center mb-3">أناقة لا مثيل لها</p>
+                        <div class="price-tag text-center">10,999 جنيه</div>
                     </div>
                 </div>
 
                 <div class="scroll-item category-card rounded-2xl shadow-xl overflow-hidden cursor-pointer"
                     onclick="selectCategory('model2', this)">
-                    <div class="bg-gradient-to-br from-green-100 to-green-200 h-48 flex items-center justify-center">
-                        <img src="assets/model4.jpg" alt="Model 4" class="w-full h-full object-cover">
+                    <div
+                        class="bg-gradient-to-br from-green-100 to-green-200 h-48 flex items-center justify-center p-2">
+                        <img src="assets/model4.jpg" alt="Model 2" class="max-w-full max-h-full object-contain">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">model2</h3>
-                        <p class="text-sm text-gray-600 text-center">تصميم فاخر ومميز</p>
+                        <h3 class="text-xl font-bold text-gray-800 text-center mb-2">Model2</h3>
+                        <p class="text-sm text-gray-600 text-center mb-3">تصميم فاخر ومميز</p>
+                        <div class="price-tag text-center">10,999 جنيه</div>
                     </div>
                 </div>
             </div>
@@ -243,39 +253,38 @@
             <div class="vertical-scroll grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
-                        <img src="assets/family1.jpg" alt="Gallery 5" class="w-full h-full object-cover">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="assets/family1.jpg" alt="Gallery 1" class="max-w-full max-h-full object-contain">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">استمتع معنا بعروض الوايت فرايداي</p>
                 </div>
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
-                        <img src="assets/area.jpeg" alt="Gallery 6" class="w-full h-full **object-contain**">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="assets/area.jpeg" alt="Gallery 2" class="max-w-full max-h-full object-contain">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">مقاسات مريحة ومناسبة للغاية</p>
                 </div>
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
-                        <img src="assets/water.jpg" alt="Gallery 3" class="w-full h-full object-cover">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="assets/water.jpg" alt="Gallery 3" class="max-w-full max-h-full object-contain">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">قماش ووتربروف مضاد للماء</p>
                 </div>
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
-                        <img src="assets/handle.jpg" alt="Gallery 4" class="w-full h-full object-cover">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="assets/handle.jpg" alt="Gallery 4" class="max-w-full max-h-full object-contain">
                     </div>
                     <p class="text-center mt-3 text-gray-700 font-semibold">يد انسيابية من الخشب الطبيعي</p>
                 </div>
                 <div class="scroll-item">
                     <div
-                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden">
-                        <img src="assets/family2.jpg" alt="Gallery 1" class="w-full h-full object-cover">
+                        class="product-img bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-64 shadow-lg overflow-hidden flex items-center justify-center p-2">
+                        <img src="assets/family2.jpg" alt="Gallery 5" class="max-w-full max-h-full object-contain">
                     </div>
-                    <p class="text-center mt-3 text-gray-700 font-semibold">استرخاء بلا حدود، ولحظات عائلية لا تُنسى.
-                    </p>
+                    <p class="text-center mt-3 text-gray-700 font-semibold">استرخاء بلا حدود، ولحظات عائلية لا تُنسى</p>
                 </div>
             </div>
         </section>
@@ -292,7 +301,6 @@
                 <div id="product1Colors">
                     <h3 class="text-2xl font-bold text-purple-600 mb-6">المنتج الأول</h3>
 
-                    <!-- Metal Color Selection -->
                     <div class="mb-12">
                         <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
                             <span class="text-3xl">🔩</span>
@@ -318,7 +326,6 @@
                         </div>
                     </div>
 
-                    <!-- Pillow Color Selection -->
                     <div class="mb-8">
                         <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
                             <span class="text-3xl">🛋️</span>
@@ -359,20 +366,11 @@
                     </div>
                 </div>
 
-                <!-- Add Second Product Button -->
-                <div class="text-center mt-8">
-                    <button id="addSecondProduct" onclick="toggleSecondProduct()"
-                        class="bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:scale-105">
-                        ➕ أضف منتج ثاني واحصل على عرض ال 2 طقم
-                    </button>
-                </div>
-
                 <!-- Product 2 Colors (Hidden by default) -->
                 <div id="product2Colors" class="mt-12 hidden">
                     <div class="border-t-4 border-purple-300 pt-8">
                         <h3 class="text-2xl font-bold text-purple-600 mb-6">المنتج الثاني 🎉</h3>
 
-                        <!-- Metal Color Selection -->
                         <div class="mb-12">
                             <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
                                 <span class="text-3xl">🔩</span>
@@ -398,7 +396,6 @@
                             </div>
                         </div>
 
-                        <!-- Pillow Color Selection -->
                         <div class="mb-8">
                             <h4 class="text-xl font-bold text-gray-700 mb-6 flex items-center gap-3">
                                 <span class="text-3xl">🛋️</span>
@@ -437,17 +434,41 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="text-center">
-                            <button onclick="toggleSecondProduct()"
-                                class="bg-red-500 text-white font-bold py-3 px-6 rounded-xl hover:bg-red-600 transition">
-                                ❌ إلغاء المنتج الثاني
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Free Shipping Notice -->
+        <div class="bg-green-100 border-2 border-green-500 rounded-xl p-6 mb-8 text-center">
+            <p class="text-green-700 font-bold text-2xl">🚚 الشحن مجاني للقاهرة والجيزة</p>
+            <p class="text-green-600 text-lg mt-2">المحافظات الأخرى: 500 جنيه رسوم شحن</p>
+        </div>
+
+        <!-- Total Bill Section -->
+        <div id="totalBillSection" class="glass-effect rounded-3xl shadow-2xl p-8 mb-8">
+            <h3 class="text-3xl font-bold text-gray-800 text-center mb-6">إجمالي الفاتورة</h3>
+            <div class="max-w-md mx-auto space-y-4">
+                <div class="flex justify-between items-center text-xl">
+                    <span class="font-semibold">عدد المنتجات:</span>
+                    <span id="productCount" class="font-bold text-purple-600">0</span>
+                </div>
+                <div class="flex justify-between items-center text-xl">
+                    <span class="font-semibold">سعر المنتجات:</span>
+                    <span id="productsPrice" class="font-bold">0 جنيه</span>
+                </div>
+                <div class="flex justify-between items-center text-xl">
+                    <span class="font-semibold">رسوم الشحن:</span>
+                    <span id="shippingCost" class="font-bold">0 جنيه</span>
+                </div>
+                <div class="border-t-2 border-gray-300 pt-4">
+                    <div class="flex justify-between items-center text-2xl">
+                        <span class="font-black">الإجمالي:</span>
+                        <span id="totalPrice" class="font-black text-green-600">0 جنيه</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Order Form -->
         <section>
@@ -455,9 +476,6 @@
                 <div class="text-center mb-10">
                     <h2 class="text-4xl font-bold text-gray-800 mb-3">أكمل بياناتك</h2>
                     <p class="text-gray-600 text-lg">معك على مدار الساعة</p>
-                    <div id="discountNotice" class="hidden mt-4 bg-green-100 border-2 border-green-500 rounded-xl p-4">
-                        <p class="text-green-700 font-bold text-xl">🎉 تهانينا! سيتم تطبيق خصم 30% على طلبك</p>
-                    </div>
                 </div>
 
                 <form id="orderForm" class="space-y-6 max-w-2xl mx-auto">
@@ -484,10 +502,38 @@
                     </div>
 
                     <div>
-                        <label class="block text-gray-700 font-bold mb-3 text-lg">المدينة *</label>
-                        <input type="text" id="city" required
-                            class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-purple-300 focus:border-purple-500 transition text-lg"
-                            placeholder="أدخل المدينة">
+                        <label class="block text-gray-700 font-bold mb-3 text-lg">المحافظة *</label>
+                        <select id="city" required onchange="updateTotalBill()"
+                            class="w-full px-6 py-4 border-2 border-gray-300 rounded-xl focus:ring-4 focus:ring-purple-300 focus:border-purple-500 transition text-lg">
+                            <option value="">اختر المحافظة</option>
+                            <option value="القاهرة">القاهرة</option>
+                            <option value="الجيزة">الجيزة</option>
+                            <option value="الإسكندرية">الإسكندرية</option>
+                            <option value="الدقهلية">الدقهلية</option>
+                            <option value="البحيرة">البحيرة</option>
+                            <option value="الشرقية">الشرقية</option>
+                            <option value="القليوبية">القليوبية</option>
+                            <option value="كفر الشيخ">كفر الشيخ</option>
+                            <option value="الغربية">الغربية</option>
+                            <option value="المنوفية">المنوفية</option>
+                            <option value="الفيوم">الفيوم</option>
+                            <option value="بني سويف">بني سويف</option>
+                            <option value="المنيا">المنيا</option>
+                            <option value="أسيوط">أسيوط</option>
+                            <option value="سوهاج">سوهاج</option>
+                            <option value="قنا">قنا</option>
+                            <option value="أسوان">أسوان</option>
+                            <option value="الأقصر">الأقصر</option>
+                            <option value="البحر الأحمر">البحر الأحمر</option>
+                            <option value="الوادي الجديد">الوادي الجديد</option>
+                            <option value="مطروح">مطروح</option>
+                            <option value="شمال سيناء">شمال سيناء</option>
+                            <option value="جنوب سيناء">جنوب سيناء</option>
+                            <option value="بورسعيد">بورسعيد</option>
+                            <option value="دمياط">دمياط</option>
+                            <option value="الإسماعيلية">الإسماعيلية</option>
+                            <option value="السويس">السويس</option>
+                        </select>
                     </div>
 
                     <div>
@@ -497,9 +543,9 @@
                             placeholder="أدخل عنوانك بالتفصيل (الشارع، المنطقة، علامات مميزة)"></textarea>
                     </div>
 
-                    <button type="submit"
+                    <button type="submit" id="submitButton"
                         class="btn-primary w-full text-white font-black py-5 px-8 rounded-xl text-xl shadow-2xl flex items-center justify-center gap-3">
-                        <span>إتمام الطلب</span>
+                        <span id="buttonText">تأكيد الطلب - 0 جنيه</span>
                         <span class="text-2xl">📱</span>
                     </button>
                 </form>
@@ -516,8 +562,9 @@
     </footer>
 
     <script>
-        let selectedCategory = '';
-        let secondProductEnabled = false;
+        let selectedCategories = [];
+        let selectedCategory1 = '';
+        let selectedCategory2 = '';
 
         // Product 1 selections
         let product1MetalColor = '';
@@ -531,7 +578,7 @@
         let product2PillowColor = '';
         let product2PillowColorName = '';
 
-        // Countdown Timer (1 hour)
+        // Countdown Timer
         function startCountdown() {
             const endTime = new Date().getTime() + (60 * 60 * 1000);
 
@@ -559,34 +606,47 @@
         startCountdown();
 
         function selectCategory(category, element) {
-            selectedCategory = category;
-            document.querySelectorAll('.category-card').forEach(card => {
-                card.classList.remove('selected');
-            });
-            element.classList.add('selected');
-        }
+            if (selectedCategories.includes(category)) {
+                // Deselect
+                selectedCategories = selectedCategories.filter(c => c !== category);
+                element.classList.remove('selected');
 
-        function toggleSecondProduct() {
-            secondProductEnabled = !secondProductEnabled;
-            const product2Section = document.getElementById('product2Colors');
-            const discountNotice = document.getElementById('discountNotice');
-            const addButton = document.getElementById('addSecondProduct');
+                if (category === selectedCategory1) {
+                    selectedCategory1 = '';
+                    product1MetalColor = '';
+                    product1MetalColorName = '';
+                    product1PillowColor = '';
+                    product1PillowColorName = '';
+                } else if (category === selectedCategory2) {
+                    selectedCategory2 = '';
+                    product2MetalColor = '';
+                    product2MetalColorName = '';
+                    product2PillowColor = '';
+                    product2PillowColorName = '';
+                }
+            } else if (selectedCategories.length < 2) {
+                // Select
+                selectedCategories.push(category);
+                element.classList.add('selected');
 
-            if (secondProductEnabled) {
-                product2Section.classList.remove('hidden');
-                discountNotice.classList.remove('hidden');
-                addButton.classList.add('hidden');
-                fbq('track', 'AddToCart', { content_type: 'second_product', value: 0, currency: 'EGP' });
+                if (!selectedCategory1) {
+                    selectedCategory1 = category;
+                } else {
+                    selectedCategory2 = category;
+                }
             } else {
-                product2Section.classList.add('hidden');
-                discountNotice.classList.add('hidden');
-                addButton.classList.remove('hidden');
-                // Reset product 2 selections
-                product2MetalColor = '';
-                product2MetalColorName = '';
-                product2PillowColor = '';
-                product2PillowColorName = '';
+                alert('⚠️ يمكنك اختيار موديلين كحد أقصى');
+                return;
             }
+
+            // Show/hide second product colors
+            if (selectedCategories.length === 2) {
+                document.getElementById('product2Colors').classList.remove('hidden');
+            } else {
+                document.getElementById('product2Colors').classList.add('hidden');
+            }
+
+            updateTotalBill();
         }
 
         function selectColor(type, color, colorName, element, productNum) {
@@ -632,6 +692,31 @@
             }
         }
 
+        function updateTotalBill() {
+            const numProducts = selectedCategories.length;
+            const city = document.getElementById('city').value;
+
+            let productsPrice = 0;
+            if (numProducts === 1) {
+                productsPrice = 10999;
+            } else if (numProducts === 2) {
+                productsPrice = 19999;
+            }
+
+            let shippingCost = 0;
+            if (city && city !== 'القاهرة' && city !== 'الجيزة') {
+                shippingCost = 500;
+            }
+
+            const totalPrice = productsPrice + shippingCost;
+
+            document.getElementById('productCount').textContent = numProducts;
+            document.getElementById('productsPrice').textContent = productsPrice.toLocaleString() + ' جنيه';
+            document.getElementById('shippingCost').textContent = shippingCost.toLocaleString() + ' جنيه';
+            document.getElementById('totalPrice').textContent = totalPrice.toLocaleString() + ' جنيه';
+            document.getElementById('buttonText').textContent = `تأكيد الطلب - ${totalPrice.toLocaleString()} جنيه`;
+        }
+
         document.getElementById('orderForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -641,9 +726,9 @@
             const city = document.getElementById('city').value;
             const fullAddress = document.getElementById('fullAddress').value;
 
-            // Validation for Product 1
-            if (!selectedCategory) {
-                alert('⚠️ الرجاء اختيار فئة المنتج أولاً');
+            // Validation
+            if (selectedCategories.length === 0) {
+                alert('⚠️ الرجاء اختيار موديل واحد على الأقل');
                 return;
             }
             if (!product1MetalColor) {
@@ -655,8 +740,7 @@
                 return;
             }
 
-            // Validation for Product 2 if enabled
-            if (secondProductEnabled) {
+            if (selectedCategories.length === 2) {
                 if (!product2MetalColor) {
                     alert('⚠️ الرجاء اختيار لون الإطار المعدني للمنتج الثاني');
                     return;
@@ -667,32 +751,37 @@
                 }
             }
 
+            // Calculate totals
+            const numProducts = selectedCategories.length;
+            let productsPrice = numProducts === 1 ? 10999 : 19999;
+            let shippingCost = (city !== 'القاهرة' && city !== 'الجيزة') ? 500 : 0;
+            const totalPrice = productsPrice + shippingCost;
+
             fbq('track', 'InitiateCheckout', {
-                content_name: selectedCategory,
+                content_name: selectedCategories.join(', '),
                 content_category: 'furniture',
-                value: 0,
+                value: totalPrice,
                 currency: 'EGP',
-                num_items: secondProductEnabled ? 2 : 1
+                num_items: numProducts
             });
 
-            // Prepare readable WhatsApp message
+            // Prepare WhatsApp message
             let message = `السلام عليكم ورحمة الله وبركاته \n\n`;
             message += ` *طلب جديد*\n`;
             message += `━━━━━━━━━━━━━━━━━\n\n`;
 
             // Product 1 Details
             message += ` *المنتج الأول:*\n`;
-            message += `• الفئة: ${selectedCategory}\n`;
+            message += `• الموديل: ${selectedCategory1}\n`;
             message += `• لون الإطار المعدني: ${product1MetalColorName}\n`;
             message += `• لون القماش والوسائد: ${product1PillowColorName}\n\n`;
 
-            // Product 2 Details (if enabled)
-            if (secondProductEnabled) {
+            // Product 2 Details (if selected)
+            if (selectedCategories.length === 2) {
                 message += ` *المنتج الثاني:*\n`;
-                message += `• الفئة: ${selectedCategory}\n`;
+                message += `• الموديل: ${selectedCategory2}\n`;
                 message += `• لون الإطار المعدني: ${product2MetalColorName}\n`;
                 message += `• لون القماش والوسائد: ${product2PillowColorName}\n\n`;
-                message += `🎉 *خصم خاص: 30% على الإجمالي*\n\n`;
             }
 
             message += ` *بيانات العميل:*\n`;
@@ -703,22 +792,27 @@
                 message += `• رقم هاتف ثانوي: ${secondaryPhone}\n`;
             }
 
-            message += `• المدينة: ${city}\n`;
+            message += `• المحافظة: ${city}\n`;
             message += `• العنوان التفصيلي: ${fullAddress}\n\n`;
+
+            message += ` *الفاتورة:*\n`;
+            message += `• عدد المنتجات: ${numProducts}\n`;
+            message += `• سعر المنتجات: ${productsPrice.toLocaleString()} جنيه\n`;
+            message += `• رسوم الشحن: ${shippingCost.toLocaleString()} جنيه\n`;
+            message += `• الإجمالي: ${totalPrice.toLocaleString()} جنيه\n\n`;
 
             message += `━━━━━━━━━━━━━━━━━\n`;
             message += ` تم إرسال الطلب: ${new Date().toLocaleString('ar-EG')}\n`;
-            message += ` عدد القطع: ${secondProductEnabled ? '2' : '1'}\n`;
             message += ` شكراً لاختياركم أثاثنا العصري`;
 
             const whatsappUrl = `https://wa.me/201558782200?text=${encodeURIComponent(message)}`;
 
             fbq('track', 'Purchase', {
-                content_name: selectedCategory,
+                content_name: selectedCategories.join(', '),
                 content_category: 'furniture',
-                value: 0,
+                value: totalPrice,
                 currency: 'EGP',
-                num_items: secondProductEnabled ? 2 : 1
+                num_items: numProducts
             });
 
             window.open(whatsappUrl, '_blank');
