@@ -757,29 +757,35 @@
 
         function updateTotalBill() {
             const numProducts = selectedCategories.length;
+            const productsPrice = numProducts === 1 ? 10999 : (numProducts === 2 ? 19999 : 0);
             const city = document.getElementById('city').value;
 
-            let productsPrice = 0;
-            if (numProducts === 1) {
-                productsPrice = 10999;
-            } else if (numProducts === 2) {
-                productsPrice = 19999;
-            }
-
             let shippingCost = 0;
-            if (city && city !== 'القاهرة' && city !== 'الجيزة') {
+
+            // --- تحديث منطق رسوم الشحن هنا ---
+            const tier2Cities = ['الإسكندرية', 'الدقهلية', 'البحيرة', 'الشرقية', 'القليوبية', 'كفر الشيخ', 'الغربية', 'المنوفية', 'الفيوم'];
+            const tier3Cities = ['بني سويف', 'المنيا', 'أسيوط', 'سوهاج', 'قنا', 'الأقصر', 'أسوان', 'البحر الأحمر', 'جنوب سيناء', 'بورسعيد', 'دمياط', 'الإسماعيلية', 'السويس'];
+
+            if (city === 'القاهرة' || city === 'الجيزة') {
+                shippingCost = 0;
+            } else if (tier2Cities.includes(city)) {
                 shippingCost = 500;
+            } else if (tier3Cities.includes(city)) {
+                shippingCost = 1500;
             }
+            // ------------------------------------
 
             const totalPrice = productsPrice + shippingCost;
 
+            // Update the UI
             document.getElementById('productCount').textContent = numProducts;
             document.getElementById('productsPrice').textContent = productsPrice.toLocaleString() + ' جنيه';
             document.getElementById('shippingCost').textContent = shippingCost.toLocaleString() + ' جنيه';
             document.getElementById('totalPrice').textContent = totalPrice.toLocaleString() + ' جنيه';
-            document.getElementById('buttonText').textContent = `تأكيد الطلب - ${totalPrice.toLocaleString()} جنيه`;
+            document.getElementById('buttonText').textContent = 'تأكيد الطلب - ' + totalPrice.toLocaleString() + ' جنيه';
         }
 
+        // Form submission handler - moved outside of updateTotalBill
         document.getElementById('orderForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -817,7 +823,20 @@
             // Calculate totals
             const numProducts = selectedCategories.length;
             let productsPrice = numProducts === 1 ? 10999 : 19999;
-            let shippingCost = (city !== 'القاهرة' && city !== 'الجيزة') ? 500 : 0;
+
+            // Use same shipping logic as updateTotalBill
+            const tier2Cities = ['الإسكندرية', 'الدقهلية', 'البحيرة', 'الشرقية', 'القليوبية', 'كفر الشيخ', 'الغربية', 'المنوفية', 'الفيوم'];
+            const tier3Cities = ['بني سويف', 'المنيا', 'أسيوط', 'سوهاج', 'قنا', 'الأقصر', 'أسوان', 'البحر الأحمر', 'جنوب سيناء', 'بورسعيد', 'دمياط', 'الإسماعيلية', 'السويس'];
+
+            let shippingCost = 0;
+            if (city === 'القاهرة' || city === 'الجيزة') {
+                shippingCost = 0;
+            } else if (tier2Cities.includes(city)) {
+                shippingCost = 500;
+            } else if (tier3Cities.includes(city)) {
+                shippingCost = 1500;
+            }
+
             const totalPrice = productsPrice + shippingCost;
 
             fbq('track', 'InitiateCheckout', {
